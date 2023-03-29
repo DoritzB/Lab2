@@ -1,23 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
+import BasicButtons from "./mybutton";
+import MediaCard from "./card";
+import BasicTextFields from "./Text";
+import BasicSelect from "./Select";
+import RadioButtonsGroup from "./Radio";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h>Doritz Botosanu CR-201</h>
+      <BasicButtons/>
+        <div className="Dreapta">
+          <MediaCard/>
+        <MediaCard/>
+        <MediaCard/>
+        <MediaCard/>
+        <MediaCard/>
+        </div>
+      <BasicTextFields/>
+        <BasicSelect/>
+        <RadioButtonsGroup/>
     </div>
   );
 }
