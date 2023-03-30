@@ -5,22 +5,29 @@ import MediaCard from "./card";
 import BasicTextFields from "./Text";
 import BasicSelect from "./Select";
 import RadioButtonsGroup from "./Radio";
+import {useState} from "react";
 
 function App() {
+    const[showCard, setShowCard] = useState(false);
+    const[showInput, setShowInput] = useState(true);
+    const HandleShowCard = () => {
+        setShowCard(!showCard)
+        setShowInput(!showInput)
+    }
   return (
-    <div className="App">
+        <div className="App">
       <h>Doritz Botosanu CR-201</h>
-      <BasicButtons/>
-        <div className="Dreapta">
-          <MediaCard/>
-        <MediaCard/>
-        <MediaCard/>
-        <MediaCard/>
-        <MediaCard/>
-        </div>
-      <BasicTextFields/>
-        <BasicSelect/>
-        <RadioButtonsGroup/>
+      <BasicButtons onClick={HandleShowCard} />
+            <div className="cardbox">
+                {showCard && <MediaCard/>}
+                {showCard && <MediaCard/>}
+                {showCard && <MediaCard/>}
+            </div>
+            <div className="cardbox1">
+                {showInput && <RadioButtonsGroup/>}
+                {showInput && <BasicTextFields/>}
+                {showInput && <BasicSelect/>}
+            </div>
     </div>
   );
 }

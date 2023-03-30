@@ -36,7 +36,7 @@
     transform: rotate(360deg);
   }
 }
-.Dreapta{
+.cardbox{
   display: flex;
   justify-content: space-around;
 }
