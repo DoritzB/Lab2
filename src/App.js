@@ -6,6 +6,7 @@ import BasicTextFields from "./Text";
 import BasicSelect from "./Select";
 import RadioButtonsGroup from "./Radio";
 import {useState} from "react";
+import ComponentCuInputuriSiButon from "./myinput";
 
 function App() {
     const[showCard, setShowCard] = useState(false);
@@ -27,6 +28,7 @@ function App() {
                 {showInput && <RadioButtonsGroup/>}
                 {showInput && <BasicTextFields/>}
                 {showInput && <BasicSelect/>}
+                {showInput && <ComponentCuInputuriSiButon/>}
             </div>
     </div>
   );
